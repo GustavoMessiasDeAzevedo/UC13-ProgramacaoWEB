@@ -24,7 +24,7 @@ class livro{
     protected $isbn;
     public $numeroDePaginas;
 
-    
+
 }
 
 
@@ -50,7 +50,7 @@ class biblioteca{
 class emprestimoLivro{
 
     public $nome;
-    public $livro;
+    public $livro;                                                 
 
     public function __construct(aluno $nome, biblioteca $nomeLivro)
     {
