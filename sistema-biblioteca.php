@@ -1,5 +1,6 @@
 <?php
 
+use biblioteca as GlobalBiblioteca;
 
 class usuario {
 
@@ -29,20 +30,20 @@ class livro{
 
 
 class biblioteca{
-    protected $nomeLivro;
+    public $nomeLivro;
     public $autor;
-    protected $isbn;
+    public $isbn;
     public $numeroDePaginas;
     public $nome;
 
      public function __construct(livro $tituloLivro, $autor, $isbn, $numeroDePaginas, usuario $nome)
      {
-        $this->nome = "Paula";
-        $this->nomeLivro= "Harry potter";
-        $this->autor = "eu";
-        $this->isbn = "1421415";
-        $this->numeroDePaginas = 142;
-        $this->nome = "Paula";
+        $this->$nome->nomeUsuario;
+        $this->$tituloLivro->nomeLivro;
+        $this->$autor->autor;
+        $this->$isbn->isbn;
+        $this->$numeroDePaginas->numeroPagina;
+      
                   
      }
 }
@@ -59,3 +60,43 @@ class emprestimoLivro{
     }
 
 }
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema biblioteca</title>
+</head>
+    <body>
+        <h1>Sistema biblioteca</h1>
+        <hr>
+
+        <form action="" method="post">
+
+            <label for="nomeDoLivro">Nome do livro:</label><br>
+            <input type="text" name="nomeDoLivro" id=""><br>
+            <label for="autorDoLivro">Autor</label><br>     
+            <input type="text" name="autorDoLivro" id=""><br>
+            <label for="isbnDoLivro">ISBN</label><br>
+            <input type="number" name="isbnDoLivro" id=""><br>
+            <label for="paginasDoLivro">Numero de páginas</label><br>
+            <input type="number" name="paginasDoLivro" id=""><br>
+
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <hr>
+
+        
+        <p>Nome do livro: </p>
+        <p>Autor: </p>
+        <p>ISBN: </p>
+        <p>Número de páginas: </p>
+    </body>
+</html>
