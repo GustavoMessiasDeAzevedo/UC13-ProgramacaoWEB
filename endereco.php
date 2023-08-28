@@ -1,25 +1,16 @@
 <?php 
 
-    class buscarEndereco{
-        
-        public function buscarEndereco($cep){
             if(isset($_POST['cep']) && !empty($_POST['cep'])){
-
                 $cep = $_POST['cep'];
-                $resultado = file_get_contents("http://viacep.com.br/ws/$cep/json/");
+                 $resultado = file_get_contents("http://viacep.com.br/ws/$cep/json/");
         
                 $dadosEndereco = json_decode($resultado, true);
-        
-                var_dump($dadosEndereco);
-        
             }else{
         
                 header("location:buscar-endereco.php"); 
                 exit;
             }       
-        }
-    
-    }
+
 ?>
 
 
@@ -44,4 +35,4 @@
         <p>Cidade: <?=$dadosEndereco['localidade'] ?></p>
         <p>Estado: <?=$dadosEndereco['uf'] ?></p>
     </body>
-</html>
+</html> 
