@@ -1,4 +1,5 @@
 <?php
+
 class Biblioteca {
     protected $nomeLivro;
     public $autor;
@@ -25,6 +26,7 @@ class Biblioteca {
     }
 }
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tituloLivro = $_POST["tituloLivro"];
     $autor = $_POST["autor"];
@@ -34,15 +36,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $biblioteca = new Biblioteca($tituloLivro, $autor, $isbn, $numeroDePaginas, $nomeUsuario);
 }
+
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Resultado da Biblioteca</title>
 </head>
+
 <body>
     
-    <h2>Formulário de Entrada</h2>
+    <h2>Formulário de Livro</h2>
     <form action="" method="post">
         <label for="tituloLivro">Título do Livro:</label>
         <input type="text" id="tituloLivro" name="tituloLivro" ><br><br>
@@ -62,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Criar Livro na Biblioteca">
     </form>
 
-    <h1>Resultado da Biblioteca</h1>
+    <h2>Resultado do cadastro de livro</h2>
     <?php if(isset($biblioteca)): ?>
         <p>Livro: <?= $biblioteca->nomeLivroPublic()?></p>
         <p>Autor: <?= $biblioteca->autor ?></p>
@@ -70,5 +75,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Número de Páginas: <?= $biblioteca->numeroDePaginas ?></p>
         <p>Nome do Usuário: <?= $biblioteca->nomeUsuario ?></p>
     <?php endif; ?>
+    <hr>
+   
+    <a href="teste2.php"  rel="noopener noreferrer"><button>Cadastrar aluno</button></a>
+    <a href="teste3.php" target="_blank" rel="noopener noreferrer"><button>Emprestimo de livro</button></a>
+
+
 </body>
 </html>
