@@ -1,5 +1,5 @@
 <?php 
-    include "teste2.php";
+    
     class emprestimo{
         public $nomeDoAluno;
         public $nomeDoLivro;
@@ -57,11 +57,11 @@
         <input type="date" name="emprestimo" id="emprestimo"><br><br>
 
         <label for="devolucao">Data da devolução:</label>
-        <input type="date" name="devolucao" id="devolucao">
+        <input type="date" name="devolucao" id="devolucao"><br><br>
 
         <input type="submit" value="Arquivar emprestimo">
 
-    </form>
+    </form><br>
 
     <a href="teste.php" target="_blank" rel="noopener noreferrer"><button>Cadastrar livro</button></a>
     <a href="teste2.php" target="_blank" rel="noopener noreferrer"><button>Cadastrar aluno</button></a>
