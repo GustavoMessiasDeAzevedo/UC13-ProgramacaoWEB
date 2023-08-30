@@ -77,8 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php endif; ?>
     <hr>
    
-    <a href="teste2.php"  rel="noopener noreferrer"><button>Cadastrar aluno</button></a>
-    <a href="teste3.php" target="_blank" rel="noopener noreferrer"><button>Emprestimo de livro</button></a>
+    <a href="aluno.php"  rel="noopener noreferrer"><button>Cadastrar aluno</button></a>
+    <a href="emprestimo.php" target="_blank" rel="noopener noreferrer"><button>Emprestimo de livro</button></a>
+    <a href="usuario.php"  rel="noopener noreferrer"><button>Cadastrar Usuario</button></a>
+
 
 
 </body>

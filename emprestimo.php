@@ -63,7 +63,9 @@
 
     </form><br>
 
-    <a href="teste.php" target="_blank" rel="noopener noreferrer"><button>Cadastrar livro</button></a>
-    <a href="teste2.php" target="_blank" rel="noopener noreferrer"><button>Cadastrar aluno</button></a>
+    <a href="biblioteca.php" target="_blank" rel="noopener noreferrer"><button>Cadastrar livro</button></a>
+    <a href="aluno.php" target="_blank" rel="noopener noreferrer"><button>Cadastrar aluno</button></a>
+    <a href="usuario.php"  rel="noopener noreferrer"><button>Cadastrar Usuario</button></a>
+
 </body>
 </html>

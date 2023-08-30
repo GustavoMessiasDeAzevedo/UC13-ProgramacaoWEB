@@ -3,6 +3,7 @@ class aluno {
     protected $nome;
     private $cpf;
     public $celular;
+    public $telefone;
     protected $dataDeNascimento;
     public $email;
 
@@ -26,10 +27,11 @@ class aluno {
         return $this->email;
     }
 
-    public function __construct($nomeAluno, $cpfAluno, $celularAluno, $dataDeNascimentoAluno, $emailAluno){
+    public function __construct($nomeAluno, $cpfAluno, $celularAluno, $telefoneAluno, $dataDeNascimentoAluno, $emailAluno){
         $this->nome = $nomeAluno;
         $this->cpf = $cpfAluno;
         $this->celular = $celularAluno;
+        $this->telefone = $telefoneAluno;
         $this->dataDeNascimento = $dataDeNascimentoAluno;
         $this->email = $emailAluno;
     }
@@ -41,10 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomeAluno = $_POST["nomeDoAluno"];
     $cpfAluno = $_POST["cpfDoAluno"];
     $celularAluno = $_POST["celularDoAluno"];
+    $telefoneAluno = $_POST["TelefoneDoAluno"];
     $dataDeNascimentoAluno = $_POST["nascimentoAluno"];
     $emailAluno = $_POST["emailContatoAluno"];
 
-    $aluno = new aluno($nomeAluno, $cpfAluno, $celularAluno, $dataDeNascimentoAluno, $emailAluno);
+    $aluno = new aluno($nomeAluno, $cpfAluno, $celularAluno, $telefoneAluno, $dataDeNascimentoAluno, $emailAluno);
 }
 ?>
 
@@ -69,6 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label for="celularDoAluno">Celular do aluno:</label>
     <input type="text" name="celularDoAluno" id="celularDoAluno"><br><br>
 
+    <label for="TelefoneDoAluno">Telefone do aluno:</label>
+    <input type="text" name="TelefoneDoAluno" id="TelefoneDoAluno"><br><br>
+
     <label for="nascimentoAluno">Data de nascimento:</label>
     <input type="date" name="nascimentoAluno" id="nascimentoAluno"><br><br>
 
@@ -83,11 +89,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p>Nome do aluno: <?= $aluno->nomePublic() ?></p>
     <p>CPF: <?= $aluno->cpfPublic() ?></p>
     <p>Celular: <?= $aluno->celularPublic() ?></p>
+    <p>Telefone: <?= $aluno->telefone ?></p>
     <p>Data de nascimento: <?= $aluno->dataPublic() ?> </p>
     <p>Email: <?= $aluno->emailPublic() ?></p>
 <?php endif; ?>
 
-<a href="teste.php"  rel="noopener noreferrer"><button>Cadastrar livro</button></a>
-<a href="teste3.php"  rel="noopener noreferrer"><button>Emprestimo de livro</button></a>
+<a href="biblioteca.php"  rel="noopener noreferrer"><button>Cadastrar livro</button></a>
+<a href="emprestimo.php"  rel="noopener noreferrer"><button>Emprestimo de livro</button></a>
+<a href="usuario.php"  rel="noopener noreferrer"><button>Cadastrar Usuario</button></a>
+
 </body>
 </html>
